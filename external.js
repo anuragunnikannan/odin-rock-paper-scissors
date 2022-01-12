@@ -8,8 +8,8 @@ function playRound(playerSelection, computerSelection)
 {
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
-    console.log("P: "+playerSelection);
-    console.log("C: "+computerSelection);
+    console.log("Player: "+playerSelection);
+    console.log("Computer: "+computerSelection);
     if(computerSelection === playerSelection)
     {
         return "Tie!";
@@ -18,44 +18,36 @@ function playRound(playerSelection, computerSelection)
     {
         if(playerSelection === "PAPER")
         {
-            /* return "You Win! "+playerSelection+" beats "+computerSelection; */
-            return "p";
+            return "Player Wins";
         }
         else
         {
-            /* return "You Lose! "+computerSelection+" beats "+playerSelection; */
-            return "c";
+            return "Computer Wins";
         }
     }
     else if(computerSelection === "PAPER")
     {
         if(playerSelection === "SCISSORS")
         {
-            /* return "You Win! "+playerSelection+" beats "+computerSelection; */
-            return "p";
+            return "Player Wins";
         }
         else
         {
-            /* return "You Lose! "+computerSelection+" beats "+playerSelection; */
-            return "c";
+            return "Computer Wins";
         }
     }
     else if(computerSelection === "SCISSORS")
     {
         if(playerSelection === "ROCK")
         {
-            /* return "You Win! "+playerSelection+" beats "+computerSelection; */
-            return "p";
+            return "Player Wins";
         }
         else
         {
-            /* return "You Lose! "+computerSelection+" beats "+playerSelection; */
-            return "c";
+            return "Computer Wins";
         }
     }
 }
-
-/* console.log(playRound(playerSelection, computerSelection)); */
 
 function game()
 {
@@ -66,11 +58,11 @@ function game()
         let playerSelection = prompt("Enter ROCK, PAPER OR SCISSORS:");
         let computerSelection = computerPlay();
         let result = playRound(playerSelection, computerSelection);
-        if(result === "p")
+        if(result === "Player Wins")
         {
             playerScore++;
         }
-        else if(result === "c")
+        else if(result === "Computer Wins")
         {
             computerScore++;
         }
