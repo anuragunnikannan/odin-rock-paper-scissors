@@ -1,6 +1,6 @@
 function computerPlay()
 {
-    let items = ["rock", "paper", "scissors"];
+    const items = ["rock", "paper", "scissors"];
     return items[Math.floor(Math.random()*items.length)]
 }
 
